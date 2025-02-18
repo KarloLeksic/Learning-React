@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
 import Greeting from "./components/Greeting.jsx";
 import ProductionInfo from "./components/ProductionInfo.jsx";
+import List from "./components/List.jsx";
 
 function App (){
     return (
@@ -11,6 +12,7 @@ function App (){
             <MainContent/>
             <Greeting/>
             <ProductionInfo/>
+            <List/>
             <Footer/>
         </>
     );
