@@ -1,8 +1,8 @@
 function ProductionInfo() {
     const product = {
-        'name': 'Laptop',
-        'price': '$1200',
-        'availability': 'In Stock'
+        name: 'Laptop',
+        price: '$1200',
+        availability: 'In Stock'
     }
 
     return (
