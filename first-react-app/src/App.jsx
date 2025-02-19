@@ -4,6 +4,7 @@ import MainContent from "./components/MainContent";
 import Greeting from "./components/Greeting.jsx";
 import ProductionInfo from "./components/ProductionInfo.jsx";
 import List from "./components/List.jsx";
+import UserList from "./components/UserList.jsx";
 
 function App (){
     return (
@@ -13,6 +14,7 @@ function App (){
             <Greeting/>
             <ProductionInfo/>
             <List/>
+            <UserList/>
             <Footer/>
         </>
     );
