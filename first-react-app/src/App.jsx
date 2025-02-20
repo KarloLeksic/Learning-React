@@ -1,27 +1,21 @@
 function App (){
     return (
         <section>
-            <Weather temperature={26}/>
+            <InlineStyle/>
         </section>
     );
 }
 
 export default App;
 
-const Weather = ({ temperature }) => {
-    let weather = '';
-    
-    if(temperature < 15) {
-        weather = 'It\'s cold outside';
-    } else if (temperature < 25) {
-        weather = 'It\'s nice outside';
-    } else {
-        weather = 'It\'s hot outside';
-    }
+const InlineStyle = ({ temperature }) => {
 
     return (
         <>
-            { weather }
+            {/*Vazno je napomenuti da treba 2 puta zagrade i da se propertiji pisu ko u javascriptu zato kad to je JS*/}
+            <h1 style={{ color: 'red', backgroundColor: 'lime'}}>
+                Inline Styling
+            </h1>
         </>
     );
 }
