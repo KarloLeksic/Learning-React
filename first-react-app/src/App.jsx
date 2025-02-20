@@ -1,28 +1,15 @@
 import { useState } from 'react';
+import ComponentOne from "./components/ComponentOne.jsx";
+import ComponentTwo from "./components/ComponentTwo.jsx";
 
 function App (){
-    const [movie, setMovie] = useState({
-        title: 'Equalizer 3',
-        ratings: 7,
-
-    });
-
-    const handleClick = () => {
-        // const copyMovie = {
-        //     ...movie,
-        //     ratings: 5
-        // };
-
-        // setMovie(copyMovie);
-
-        setMovie({...movie, ratings: 5});
-    };
+    const [count, setCount] = useState(0);
+    // Ovako ceju ove dvije komponente dijeliti state
 
     return (
         <>
-            <h1>Title: {movie.title}</h1>
-            <p>Ratings: {movie.ratings}</p>
-            <button onClick={handleClick}>Change Rating</button>
+            <ComponentOne count={count} onClickHandler={() => setCount(count + 1)}/>
+            <ComponentTwo count={count} onClickHandler={() => setCount(count - 1)} />
         </>
     );
 }
