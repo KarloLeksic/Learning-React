@@ -8,7 +8,7 @@ function App (){
     return (
         <>
             <h1>Icons</h1>
-            <FaCartArrowDown />
+            <FaCartArrowDown size={30} color='gold' />
             <FaComputer />
         </>
     );
