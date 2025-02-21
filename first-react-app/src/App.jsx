@@ -1,9 +1,11 @@
+import CopyInput from "./components/CopyInput.jsx";
+
 function App (){
 
 
     return (
         <>
-            nis
+            <CopyInput/>
         </>
     );
 }
