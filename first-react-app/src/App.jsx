@@ -1,11 +1,9 @@
-import Example from "./components/Example.jsx";
-
 function App (){
 
 
     return (
         <>
-            <Example/>
+            nis
         </>
     );
 }
