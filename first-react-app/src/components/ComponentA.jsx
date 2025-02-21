@@ -1,19 +1,15 @@
 import {Data, Data1} from '../App';
+import { useContext } from 'react';
 
 const ComponentA = () => {
+    // predajemo odakle dolaze podaci
+    const userName = useContext(Data);
+    const age = useContext(Data1);
+
     return (
-        // Ovaj prima te podatke i unutra imamo te nase podatke
-        <Data.Consumer>
-            { (name) => {
-                return (
-                    <Data1.Consumer>
-                        {(age) => {
-                            return <h1>My name is: {name}, age: {age}</h1>
-                        }}
-                    </Data1.Consumer>
-                )
-            } }
-        </Data.Consumer>
+        <>
+            <h1>My name is {userName} and I'm {age} years old</h1>
+        </>
     );
 }
 export default ComponentA;
