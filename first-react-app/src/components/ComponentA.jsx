@@ -1,11 +1,17 @@
-import { Data } from '../App';
+import {Data, Data1} from '../App';
 
 const ComponentA = () => {
     return (
         // Ovaj prima te podatke i unutra imamo te nase podatke
         <Data.Consumer>
             { (name) => {
-                return <h1>Name: {name}</h1>
+                return (
+                    <Data1.Consumer>
+                        {(age) => {
+                            return <h1>My name is: {name}, age: {age}</h1>
+                        }}
+                    </Data1.Consumer>
+                )
             } }
         </Data.Consumer>
     );
