@@ -1,11 +1,5 @@
-import Timer from './components/Timer.jsx';
-
 function App() {
-    return (
-        <>
-            <Timer />
-        </>
-    );
+    return <></>;
 }
 
 export default App;
