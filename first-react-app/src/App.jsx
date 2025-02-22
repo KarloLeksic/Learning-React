@@ -1,11 +1,5 @@
-import Counter from './components/Counter.jsx';
-
 function App() {
-    return (
-        <>
-            <Counter />
-        </>
-    );
+    return <></>;
 }
 
 export default App;
