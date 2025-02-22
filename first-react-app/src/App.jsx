@@ -1,13 +1,7 @@
-import { useState, useEffect } from 'react';
+import useFetch from './useFetch';
 
 function App() {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
-            .then((res) => res.json())
-            .then((data) => setData(data));
-    }, []);
+    const [data] = useFetch('https://jsonplaceholder.typicode.com/todos');
 
     return (
         <>
@@ -20,5 +14,3 @@ function App() {
 }
 
 export default App;
-
-// sve je ovo lijepo i krasno, ali ako cemo ponavljati fetch puno puta onda opet moramo raditi tih par stvari. Umjesto toga mozemo podesiti custom hook, to je motoda koja se zove useNesta. U ovom slucaju bi ti bilo useFetch koja bi samo vratila podatke i odma ih imamo
