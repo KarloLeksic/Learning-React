@@ -1,26 +1,11 @@
-// Mozemo ovako napraviti poseban tip da kazemo koji ce podaci biti
-// type UserShape = {
-//     name: string;
-//     age: number;
-//     isStudent: boolean;
-// };
+import { ReactNode } from 'react';
 
-// Isto mozemo i sa interface-om
+// Ctrl + klik nas vodi u .d.ts di se inace nalaze definicije tipova
 interface UserShape {
-    name: string;
-    age: number;
-    isStudent: boolean;
+    children: ReactNode;
 }
 
-// Baca nam gresku jer moramo definirati koji su to tipovi
-// Kad dodamo ove tipove, onda nam nece bacati gresku
-const User = ({ name, age, isStudent }: UserShape) => {
-    return (
-        <>
-            <h2>{name}</h2>
-            <h2>{age}</h2>
-            <h2>{isStudent}</h2>
-        </>
-    );
+const User = ({ children }: UserShape) => {
+    return <div>{children}</div>;
 };
 export default User;
