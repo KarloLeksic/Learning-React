@@ -1,11 +1,19 @@
-import { ReactNode } from 'react';
+import { FC } from 'react';
 
-// Ctrl + klik nas vodi u .d.ts di se inace nalaze definicije tipova
 interface UserShape {
-    children: ReactNode;
+    name: string;
+    age: number;
+    isStudent: boolean;
 }
 
-const User = ({ children }: UserShape) => {
-    return <div>{children}</div>;
+// Ovo je stariji nacin
+const User: FC<UserShape> = ({ name, age, isStudent }) => {
+    return (
+        <div>
+            <h2>{name}</h2>
+            <h2>{age}</h2>
+            <h2>{isStudent}</h2>
+        </div>
+    );
 };
 export default User;
